@@ -98,22 +98,18 @@ def title_loop():
         
     if os.name == "nt":
         while True:
-            os.system(f'title TikTok Viewbot by @imrevolt ^| success: {success} fails: {fails} reqs: {reqs} rps: {rps} rpm: {rpm}')
+            os.system(f'title TikTok Viewbot by @sumzum ^| success: {success} fails: {fails} reqs: {reqs} rps: {rps} rpm: {rpm}')
             time.sleep(0.1)
 
 if __name__ == "__main__":
-    os.system("cls" if os.name == "nt" else "clear"); os.system("title TikTok Viewbot by @imrevolt" if os.name == "nt" else "")
-    txt = """\n\n██████╗ ███████╗██╗   ██╗██╗███████╗██╗    ██╗███████╗\n██╔══██╗██╔════╝██║   ██║██║██╔════╝██║    ██║██╔════╝\n██████╔╝█████╗  ██║   ██║██║█████╗  ██║ █╗ ██║███████╗\n██╔══██╗██╔══╝  ╚██╗ ██╔╝██║██╔══╝  ██║███╗██║╚════██║\n██║  ██║███████╗ ╚████╔╝ ██║███████╗╚███╔███╔╝███████║\n╚═╝  ╚═╝╚══════╝  ╚═══╝  ╚═╝╚══════╝ ╚══╝╚══╝ ╚══════╝\n┗━━━━━━━━━━━(©) 2022 Copyright sumzum#1827━━━━━━━━━━━┛
-"""
+    os.system("cls" if os.name == "nt" else "clear"); os.system("title TikTok Viewbot by @sumzum" if os.name == "nt" else "")
     
     print(
-        Colorate.Vertical(
-            Colors.DynamicMIX((Col.yellow, Col.red)), Center.XCenter(txt)
-        )
+    Colorate.Horizontal(Colors.yellow_to_red, "\n\n ██████╗ ███████╗██╗   ██╗██╗███████╗██╗    ██╗███████╗\n ██╔══██╗██╔════╝██║   ██║██║██╔════╝██║    ██║██╔════╝\n ██████╔╝█████╗  ██║   ██║██║█████╗  ██║ █╗ ██║███████╗\n ██╔══██╗██╔══╝  ╚██╗ ██╔╝██║██╔══╝  ██║███╗██║╚════██║\n ██║  ██║███████╗ ╚████╔╝ ██║███████╗╚███╔███╔╝███████║\n ╚═╝  ╚═╝╚══════╝  ╚═══╝  ╚═╝╚══════╝ ╚══╝╚══╝ ╚══════╝\n ┗━━━━━━━━━━━(©) 2022 Copyright sumzum#1827━━━━━━━━━━━┛")
     )
     
     try:
-        link = str(Write.Input("\n\n[?] TikTok Link -> ", Colors.yellow_to_red, interval=0.0001))
+        link = str(Write.Input("\n\n [?] TikTok Link -> ", Colors.yellow_to_red, interval=0.0001))
         __aweme_id = str(
             re.findall(r"(\d{18,19})", link)[0]
             if len(re.findall(r"(\d{18,19})", link)) == 1
@@ -128,7 +124,7 @@ if __name__ == "__main__":
         sys.exit(0)
     
     os.system("cls" if os.name == "nt" else "clear")
-    print("loading...")
+    print(Colors.yellow_to_red, "sending...")
     
     _lock = threading.Lock()
     reqs = 0
