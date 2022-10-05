@@ -124,7 +124,7 @@ if __name__ == "__main__":
         sys.exit(0)
     
     os.system("cls" if os.name == "nt" else "clear")
-    print(Colors.yellow_to_red, "sending...")
+    print("sending...")
     
     _lock = threading.Lock()
     reqs = 0
